@@ -7,7 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Build
 dist
 dist-ssr
 *.local
@@ -22,11 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-node_modules/
-dist/
-public/images/
-*.jpg
-*.JPG
-*.png
-*.PNG
