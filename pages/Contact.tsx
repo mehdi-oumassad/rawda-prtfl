@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
           
           <address className="font-sans text-sm text-gray-300 not-italic leading-relaxed">
             <br/>
-            Rabat, Morocco
+            Morocco
           </address>
         </div>
       </div>
