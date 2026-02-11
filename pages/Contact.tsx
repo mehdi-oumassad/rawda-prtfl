@@ -36,6 +36,17 @@ const Contact: React.FC = () => {
             <br/>
             Morocco
           </address>
+          {/* SECTION CONTACT EXISTANTE ... */}
+
+{/* COPYRIGHT EN BAS DE PAGE */}
+<footer className="w-full py-10 mt-auto">
+  <div className="text-center">
+    <p className="text-[8px] md:text-[10px] tracking-[0.3em] text-gray-400 uppercase">
+      © {new Date().getFullYear()} Medigraphy. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+          
         </div>
       </div>
       

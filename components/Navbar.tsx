@@ -1,70 +1,63 @@
-import React, { useState } from 'react'; // Ajout de useState
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour le menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm transition-all duration-300">
-      <div className="w-full flex justify-between items-center py-2 px-6 md:px-10">
+    <header className="fixed top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-gray-50 transition-all duration-300">
+      <div className="w-full h-20 md:h-24 flex justify-between items-center px-6 md:px-10">
         
-        {/* Logo Section */}
-        <div className="z-50 flex items-center">
-          <Link 
-            to="/" 
-            className="flex items-center hover:opacity-60 transition-opacity duration-300"
-          >
+        {/* Logo */}
+        <div className="z-[110]">
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>
             <img 
               src="/images/MEDIGRAPHY_LOGO-removebg-preview.png" 
               alt="Medigraphy" 
-              className="h-16 md:h-20 w-auto"
-              style={{ objectFit: 'contain', maxWidth: '250px' }}
+              className="h-12 md:h-16 w-auto transition-transform duration-500 hover:scale-105"
             />
           </Link>
         </div>
         
-        {/* Navigation Desktop */}
-        <nav className="hidden md:flex space-x-12 text-[10px] font-medium tracking-[0.25em] uppercase items-center">
-          <Link to="/" className={`transition-all duration-300 ${isActive('/') ? 'text-black border-b border-black pb-1' : 'text-gray-400 hover:text-black'}`}>
+        {/* Nav Desktop */}
+        <nav className="hidden md:flex space-x-12 text-[10px] font-medium tracking-[0.25em] uppercase">
+          <Link to="/" className={`hover:text-black transition-colors ${isActive('/') ? 'text-black font-bold' : 'text-gray-400'}`}>
             Selected Work
           </Link>
-          <Link to="/contact" className={`transition-all duration-300 ${isActive('/contact') ? 'text-black border-b border-black pb-1' : 'text-gray-400 hover:text-black'}`}>
+          <Link to="/contact" className={`hover:text-black transition-colors ${isActive('/contact') ? 'text-black font-bold' : 'text-gray-400'}`}>
             Contact
           </Link>
         </nav>
 
-        {/* Mobile Menu Button (3 Dots) - CORRIGÉ */}
+        {/* Mobile Button (Les 3 points) */}
         <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)} // Déclenche l'ouverture
-          className="md:hidden flex items-center justify-center p-2 text-black hover:opacity-60 transition-opacity z-50 relative"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden z-[110] p-2 text-black outline-none flex flex-col gap-1.5 items-center justify-center"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="4" r="2" fill="currentColor"/>
-            <circle cx="12" cy="12" r="2" fill="currentColor"/>
-            <circle cx="12" cy="20" r="2" fill="currentColor"/>
-          </svg>
+          <span className={`w-1 h-1 bg-black rounded-full transition-all ${isMenuOpen ? 'scale-150 bg-red-500' : ''}`}></span>
+          <span className={`w-1 h-1 bg-black rounded-full transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`w-1 h-1 bg-black rounded-full transition-all ${isMenuOpen ? 'scale-150 bg-red-500' : ''}`}></span>
         </button>
 
-        {/* Menu Mobile - AJOUTÉ */}
-        <div className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 text-[12px] font-medium tracking-[0.3em] uppercase transition-transform duration-500 ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-          <Link 
-            to="/" 
-            onClick={() => setIsMenuOpen(false)} // Ferme le menu après clic
-            className={isActive('/') ? 'text-black' : 'text-gray-400'}
-          >
-            Selected Work
-          </Link>
-          <Link 
-            to="/contact" 
-            onClick={() => setIsMenuOpen(false)}
-            className={isActive('/contact') ? 'text-black' : 'text-gray-400'}
-          >
-            Contact
-          </Link>
-        </div>
+        {/* Fullscreen Mobile Menu Overlay */}
+        <div className={`fixed inset-0 bg-white z-[100] flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+          
+          {/* Liens du Menu */}
+          <div className="flex flex-col items-center space-y-10 text-[14px] tracking-[0.4em] uppercase">
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:scale-110 transition-transform">
+              Selected Work
+            </Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="hover:scale-110 transition-transform">
+              Contact
+            </Link>
+          </div>
+        
+          
+        </div> 
+
       </div>
     </header>
   );
