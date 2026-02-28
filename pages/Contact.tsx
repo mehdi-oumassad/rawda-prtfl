@@ -35,9 +35,8 @@ const Contact: React.FC = () => {
               <h3 className="font-sans text-xs font-bold uppercase tracking-widest mb-6 text-black">
                 Selected Clients
               </h3>
-              <p className="font-sans text-xs md:text-sm leading-6 md:leading-7 text-gray-600 text-justify">
-                ALKARA-LUNE DE JOUR-DREAM WEAVE-KAMTIS-KIFESH STORE-HOUSE OF DMANA-CLAQUE-KADE.
-              </p>
+              <p>
+                HOUSE OF DMANA — DREAM WEAVE — LUNE DE JOUR — KAMTIS — KIFESH STORE — ALKARA  — CLAQUE-KADE              </p>
             </div>
 
             {/* Footer / Contact Details */}
