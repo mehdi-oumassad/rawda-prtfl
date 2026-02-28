@@ -21,7 +21,7 @@ const allImages = [
   { order: 11, fileName: "DSC09861-11.jpg",  title: "DSC09861" },
   { order: 12, fileName: "DSC04563-12.jpg",  title: "DSC04563" },
   { order: 13, fileName: "DSC_0168-13.png",  title: "DSC_0168" },
-  { order: 14, fileName: "DSC09076-3.PNG",  title: "DSC09076" },
+  { order: 14, fileName: "DSC09076-3.png",  title: "DSC09076" },
   { order: 15, fileName: "IMG_6368-15.jpg",  title: "IMG_6368" },
   { order: 16, fileName: "IMG_6366-16.jpg",  title: "IMG_6366" },
   { order: 17, fileName: "DSC04587-17.jpg",  title: "DSC04587" },
