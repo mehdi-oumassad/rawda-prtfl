@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
                 Selected Clients
               </h3>
               <p>
-                HOUSE OF DMANA — DREAM WEAVE — LUNE DE JOUR — KAMTIS — KIFESH STORE — ALKARA  — CLAQUE-KADE              </p>
+                HOUSE OF DMANA — DREAM WEAVE — LUNE DE JOUR — KAMTIS — KIFESH STORE — ALKARA  — CLAQUE — KADE              </p>
             </div>
 
             {/* Footer / Contact Details */}
