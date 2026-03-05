@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ isCompact = false }) => {
         <div className="z-[110]">
           <Link to="/">
             <img 
-              src="/images/MEDIGRAPHY_LOGO-removebg-preview.png" 
+              src="/images/optimized-MEDIGRAPHY_LOGO-removebg-preview.webp" 
               alt="Logo" 
               className={`w-auto transition-all ${isCompact ? 'h-10' : 'h-14'}`}
               style={{ mixBlendMode: isSelectedWork && !isOpen ? 'difference' : 'normal' }}

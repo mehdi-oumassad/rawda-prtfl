@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
           <div className="w-full lg:hidden mb-16 order-2">
             <div className="relative w-full aspect-[3/4] overflow-hidden shadow-lg">
               <img 
-                src="/images/DSC09431.jpg" 
+                src="/images/optimized-DSC09431.webp" 
                 alt="Medigraphy - Photographer" 
                 className="w-full h-full object-cover grayscale transition-all duration-700 ease-out"
               />
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
         <div className="hidden lg:flex lg:w-2/5 items-center justify-end order-2">
           <div className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-lg">
             <img 
-              src="/images/DSC09431.jpg" 
+              src="/images/optimized-DSC09431.webp" 
               alt="Medigraphy - Photographer" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out"
             />
